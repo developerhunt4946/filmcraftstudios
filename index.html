@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Filmcraft Institute | Cinematography & Video Editing Course</title>
+  <meta name="description"
+    content="Official Registration Form for Filmcraft Institute Cinematography & Video Editing Course. Master Premiere Pro, Professional Cinema Cameras, and Color Grading." />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Space+Grotesk:wght@600;700;800&display=swap"
+    rel="stylesheet">
+
+  <!-- FontAwesome Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+
+<body>
+
+  <!-- Background decorative elements -->
+  <div class="bg-glow sphere-1"></div>
+  <div class="bg-glow sphere-2"></div>
+  <div class="bg-grid"></div>
+
+  <div class="app-container">
+
+    <!-- Top Cinema Header / Banner -->
+    <header class="hero-header card-banner glass-card">
+      <div class="banner-img-container">
+        <img src="hero_banner.png" alt="Filmcraft Cinema Production Header" class="hero-banner-img" />
+        <div class="banner-overlay"></div>
+      </div>
+
+      <div class="banner-content">
+        <div class="event-badge">
+          <span class="pulse-dot"></span>
+          <span><i class="fa-solid fa-clapperboard"></i> FILMCRAFT INSTITUTE &bull; ADMISSION 2026</span>
+        </div>
+
+        <h1 class="hero-title">Cinematography &amp; Video Editing Course</h1>
+        <p class="hero-subtitle">Master Professional Cinema Cameras, Professional Color Grading
+          &amp; Lighting with Industry Experts.</p>
+
+        <!-- Software & Hardware Badges -->
+        <div class="software-pills">
+          <span class="software-pill"><i class="fa-solid fa-video"></i> Professional Cinema Cameras</span>
+          <span class="software-pill"><i class="fa-solid fa-sliders"></i> Professional Color Grading</span>
+          <!-- <span class="software-pill"><i class="fa-solid fa-scissors"></i> Adobe Premiere Pro</span> -->
+        </div>
+
+        <!-- Account notice banner from original form -->
+        <div class="account-notice-box">
+          <div class="user-chip">
+            <i class="fa-solid fa-user-circle"></i>
+            <span>aagm0404@gmail.com</span>
+          </div>
+          <p class="notice-text">
+            <i class="fa-solid fa-shield-halved"></i>
+            The name, email, and files submitted will be recorded for your course enrollment confirmation.
+          </p>
+        </div>
+      </div>
+    </header>
+
+    <!-- Main Content Grid -->
+    <main class="main-grid">
+
+      <!-- Left Column: Registration Form -->
+      <section class="card glass-card form-section">
+
+        <!-- Stepper -->
+        <div class="stepper-header">
+          <div class="step-indicator active" id="step-ind-1">
+            <div class="step-num"><i class="fa-solid fa-camera"></i></div>
+            <div class="step-text">
+              <span class="step-title">Student Info</span>
+              <span class="step-sub">Your Details</span>
+            </div>
+          </div>
+          <div class="step-line"></div>
+          <div class="step-indicator" id="step-ind-2">
+            <div class="step-num"><i class="fa-solid fa-receipt"></i></div>
+            <div class="step-text">
+              <span class="step-title">Payment &amp; Proof</span>
+              <span class="step-sub">Verification</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="registration-form" novalidate>
+
+          <!-- STEP 1: Student Information -->
+          <div class="form-step active" id="step-1">
+            <h2 class="section-title"><i class="fa-solid fa-video"></i> Course Enrollment Form</h2>
+            <p class="section-desc"><span class="req">*</span> Indicates required question</p>
+
+            <!-- Field 1: Your Name -->
+            <div class="input-group">
+              <label for="full-name">Your Name <span class="req">*</span></label>
+              <div class="input-wrapper">
+                <i class="fa-regular fa-user input-icon"></i>
+                <input type="text" id="full-name" placeholder="Enter your full name" required />
+              </div>
+              <span class="error-msg" id="err-full-name">Please enter your name</span>
+            </div>
+
+            <!-- Field 2: Mobile No -->
+            <div class="input-group">
+              <label for="mobile">Mobile No <span class="req">*</span></label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-phone input-icon"></i>
+                <input type="tel" id="mobile" placeholder="Enter 10-digit Mobile Number" required />
+              </div>
+              <span class="error-msg" id="err-mobile">Valid 10-digit mobile number required</span>
+            </div>
+
+            <!-- Field 3: Address -->
+            <div class="input-group">
+              <label for="address">Address <span class="req">*</span></label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-location-dot input-icon"></i>
+                <input type="text" id="address" placeholder="Enter your city / full residential address" required />
+              </div>
+              <span class="error-msg" id="err-address">Please enter your address</span>
+            </div>
+
+            <!-- Field 4: Select Payment Method -->
+            <div class="input-group">
+              <label>Select Payment Method <span class="req">*</span></label>
+              <div class="payment-method-options">
+                <label class="radio-card active" id="card-method-qr">
+                  <input type="radio" name="payment_method" value="Pay By QR ( UPI)" checked />
+                  <div class="radio-content">
+                    <div class="radio-icon"><i class="fa-solid fa-qrcode"></i></div>
+                    <div class="radio-text">
+                      <strong>Pay By QR ( UPI)</strong>
+                      <span>Instant scan via GPay, PhonePe, Paytm</span>
+                    </div>
+                  </div>
+                </label>
+
+                <label class="radio-card" id="card-method-bank">
+                  <input type="radio" name="payment_method" value="Bank Transfer ( IMPS , NEFT )" />
+                  <div class="radio-content">
+                    <div class="radio-icon"><i class="fa-solid fa-building-columns"></i></div>
+                    <div class="radio-text">
+                      <strong>Bank Transfer ( IMPS , NEFT )</strong>
+                      <span>Direct transfer to Institute bank account</span>
+                    </div>
+                  </div>
+                </label>
+              </div>
+            </div>
+
+            <button type="button" class="btn btn-primary btn-block mt-4" id="btn-next-step">
+              <span>Continue to Payment &amp; Upload</span>
+              <i class="fa-solid fa-arrow-right"></i>
+            </button>
+          </div>
+
+          <!-- STEP 2: Payment Verification & Screenshot -->
+          <div class="form-step" id="step-2">
+            <div class="step-top-bar">
+              <button type="button" class="btn-back" id="btn-back-step">
+                <i class="fa-solid fa-arrow-left"></i> Back to details
+              </button>
+              <div class="selected-amount-tag" id="selected-method-pill">
+                Method: <strong>Pay By QR ( UPI)</strong>
+              </div>
+            </div>
+
+            <h2 class="section-title"><i class="fa-solid fa-receipt"></i> Payment Proof &amp; Verification</h2>
+            <p class="section-desc">Complete payment using the chosen method on the right panel, then enter reference
+              UTR &amp; upload screenshot.</p>
+
+            <div class="input-group">
+              <label for="txn-id">Transaction ID / UTR / Reference No. <span class="req">*</span></label>
+              <div class="input-wrapper">
+                <i class="fa-solid fa-hashtag input-icon"></i>
+                <input type="text" id="txn-id" placeholder="e.g. 420918291039 or UTR No." required />
+              </div>
+              <span class="error-msg" id="err-txn-id">Transaction / UTR reference number is required</span>
+            </div>
+
+            <div class="input-group">
+              <label>Upload Payment Screenshot <span class="req">*</span></label>
+              <div class="file-dropzone" id="dropzone">
+                <input type="file" id="screenshot-file" accept="image/*" class="file-input-hidden" required />
+                <div class="dropzone-content" id="dropzone-default">
+                  <div class="dropzone-icon">
+                    <i class="fa-solid fa-cloud-arrow-up"></i>
+                  </div>
+                  <p class="dropzone-title">Click to upload or drag &amp; drop screenshot</p>
+                  <p class="dropzone-hint">PNG, JPG, JPEG or WEBP (Max 5MB)</p>
+                </div>
+                <div class="dropzone-preview hidden" id="dropzone-preview">
+                  <img src="" id="preview-img" alt="Payment Screenshot Preview" />
+                  <div class="preview-info">
+                    <span id="preview-filename">screenshot.png</span>
+                    <button type="button" class="btn-remove-file" id="btn-remove-file">
+                      <i class="fa-solid fa-xmark"></i> Remove
+                    </button>
+                  </div>
+                </div>
+              </div>
+              <span class="error-msg" id="err-screenshot">Please attach your payment screenshot</span>
+            </div>
+
+            <div class="info-alert">
+              <i class="fa-solid fa-circle-info"></i>
+              <span>Clicking submit will launch WhatsApp pre-loaded with your registration details. Send the message and
+                screenshot to complete enrollment!</span>
+            </div>
+
+            <button type="submit" class="btn btn-whatsapp btn-block mt-4" id="btn-submit">
+              <i class="fa-brands fa-whatsapp"></i>
+              <span>Submit &amp; Share on WhatsApp</span>
+            </button>
+          </div>
+
+        </form>
+
+      </section>
+
+      <!-- Right Column: Film Institute Payment Panel -->
+      <section class="card glass-card payment-info-section">
+
+        <div class="payment-header">
+          <h3><i class="fa-solid fa-film"></i> Official Payment Details</h3>
+          <span class="secure-tag"><i class="fa-solid fa-shield-halved"></i> Verified Pass</span>
+        </div>
+
+        <!-- Course Summary Header Box -->
+        <div class="amount-card">
+          <div class="amount-label">Course Fee</div>
+          <div class="amount-value" id="qr-fee-display">₹14,999</div>
+          <div class="amount-sub">Cinematography &amp; Video Editing Course</div>
+        </div>
+
+        <!-- Dynamic Payment Display Tabs -->
+        <div class="payment-tabs">
+          <button class="tab-btn active" data-tab="tab-upi" id="tab-btn-upi">
+            <i class="fa-solid fa-mobile-screen-button"></i> Pay By QR ( UPI)
+          </button>
+          <button class="tab-btn" data-tab="tab-bank" id="tab-btn-bank">
+            <i class="fa-solid fa-building-columns"></i> Bank Transfer
+          </button>
+        </div>
+
+        <!-- Tab 1: UPI QR Code -->
+        <div class="tab-content active" id="tab-upi">
+          <div class="qr-container">
+            <div class="qr-frame">
+              <img src="qr.jpeg" alt="Filmcraft Institute UPI QR Code" id="qr-code-img" />
+            </div>
+            <p class="qr-instruction">Scan with GPay, PhonePe, Paytm, or any UPI App</p>
+          </div>
+
+          <div class="detail-box">
+            <span class="detail-label">UPI ID</span>
+            <div class="copy-field">
+              <code id="upi-id-text">filmcraftinstitute@upi</code>
+              <button type="button" class="btn-copy" data-copy="filmcraftinstitute@upi" title="Copy UPI ID">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="detail-box">
+            <span class="detail-label">Account Holder Name</span>
+            <div class="detail-val">Harsh Kumar</div>
+          </div>
+        </div>
+
+        <!-- Tab 2: Bank Transfer (IMPS, NEFT) -->
+        <div class="tab-content" id="tab-bank">
+          <div class="detail-box">
+            <span class="detail-label">Account Holder Name</span>
+            <div class="detail-val">Harsh Kumar</div>
+          </div>
+
+          <div class="detail-box">
+            <span class="detail-label">Account Number</span>
+            <div class="copy-field">
+              <code id="bank-acc-text">08298100022610</code>
+              <button type="button" class="btn-copy" data-copy="08298100022610" title="Copy Account Number">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="detail-box">
+            <span class="detail-label">IFSC Code</span>
+            <div class="copy-field">
+              <code id="bank-ifsc-text">BARB0BANDAX</code>
+              <button type="button" class="btn-copy" data-copy="BARB0BANDAX" title="Copy IFSC Code">
+                <i class="fa-regular fa-copy"></i>
+              </button>
+            </div>
+          </div>
+
+          <div class="detail-box">
+            <span class="detail-label">Bank Name / Transfer Type</span>
+            <div class="detail-val">Bank of Baroda • IMPS / NEFT</div>
+          </div>
+        </div>
+
+        <!-- Course Curriculum Feature List -->
+        <div class="curriculum-box">
+          <div class="curriculum-title"><i class="fa-solid fa-photo-film"></i> Course Highlights Included</div>
+          <ul class="curriculum-list">
+            <li><i class="fa-solid fa-check"></i> Professional Cinema Cameras Handling</li>
+            <li><i class="fa-solid fa-check"></i> Adobe Premiere Pro Video Editing</li>
+            <li><i class="fa-solid fa-check"></i> Professional Color Grading</li>
+            <li><i class="fa-solid fa-check"></i> Lighting &amp; Composition Techniques</li>
+          </ul>
+        </div>
+
+        <!-- Contact Support info -->
+        <div class="support-footer">
+          <i class="fa-solid fa-headset"></i>
+          <span>Admissions WhatsApp: <strong>+91 98765 43210</strong></span>
+        </div>
+
+      </section>
+
+    </main>
+
+    <footer class="app-footer">
+      <p>&copy; 2026 Filmcraft Institute. Cinematography &amp; Video Editing Course.</p>
+    </footer>
+
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container"></div>
+
+  <script src="app.js"></script>
+</body>
+
+</html>
