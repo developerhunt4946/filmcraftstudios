@@ -1004,15 +1004,623 @@ input:focus + .input-icon,
   to { transform: translateX(0); opacity: 1; }
 }
 
-@media (max-width: 900px) {
-  .main-grid { grid-template-columns: 1fr; }
-  .payment-info-section { position: static; }
+/* Tablet & Small Desktop */
+@media (max-width: 1024px) {
+  .app-container {
+    padding: 1.5rem 1rem;
+  }
+  
+  .main-grid {
+    gap: 1.5rem;
+  }
 }
 
-@media (max-width: 600px) {
-  .hero-title { font-size: 1.75rem; }
-  .stepper-header { flex-direction: column; align-items: flex-start; gap: 0.75rem; }
-  .step-line { display: none; }
-  .glass-card { padding: 1.25rem; }
-  .software-pills { justify-content: flex-start; }
+/* Tablet */
+@media (max-width: 900px) {
+  .main-grid { 
+    grid-template-columns: 1fr; 
+  }
+  
+  .payment-info-section { 
+    position: static; 
+  }
+  
+  .hero-title {
+    font-size: 2rem;
+  }
+  
+  .app-container {
+    padding: 1.25rem 1rem;
+  }
+  
+  .glass-card {
+    padding: 1.5rem;
+  }
+  
+  .stepper-header {
+    gap: 1rem;
+  }
 }
+
+/* Mobile Large (768px and below) */
+@media (max-width: 768px) {
+  .app-container {
+    padding: 1rem;
+    max-width: 100%;
+  }
+  
+  .card-banner {
+    margin-bottom: 1.5rem;
+    border-radius: var(--radius-md);
+  }
+  
+  .banner-content {
+    padding: 2rem 1.5rem;
+  }
+  
+  .hero-title { 
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.95rem;
+    margin-bottom: 1rem;
+  }
+  
+  .software-pills { 
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+  }
+  
+  .software-pill {
+    justify-content: center;
+  }
+  
+  .account-notice-box {
+    width: 100%;
+    max-width: 100%;
+  }
+  
+  .event-badge {
+    font-size: 0.8rem;
+    padding: 0.4rem 0.9rem;
+  }
+  
+  .glass-card {
+    padding: 1.25rem;
+    border-radius: var(--radius-md);
+  }
+  
+  .stepper-header { 
+    flex-direction: column; 
+    align-items: flex-start; 
+    gap: 0.75rem;
+    padding-bottom: 1rem;
+  }
+  
+  .step-line { 
+    display: none; 
+  }
+  
+  .step-indicator {
+    width: 100%;
+    justify-content: space-between;
+  }
+  
+  .input-group {
+    margin-bottom: 1rem;
+  }
+  
+  label {
+    font-size: 0.85rem;
+  }
+  
+  input[type="text"],
+  input[type="tel"] {
+    padding: 0.75rem 1rem 0.75rem 2.7rem;
+    font-size: 16px;
+  }
+  
+  .input-icon {
+    left: 0.8rem;
+  }
+  
+  .radio-card {
+    padding: 0.9rem 1rem;
+  }
+  
+  .radio-content {
+    gap: 0.8rem;
+  }
+  
+  .radio-icon {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+  }
+  
+  .radio-text strong {
+    font-size: 0.92rem;
+  }
+  
+  .radio-text span {
+    font-size: 0.78rem;
+  }
+  
+  .file-dropzone {
+    padding: 1.5rem 1rem;
+  }
+  
+  .dropzone-icon {
+    font-size: 1.8rem;
+  }
+  
+  .dropzone-title {
+    font-size: 0.9rem;
+  }
+  
+  .btn {
+    padding: 0.85rem 1.5rem;
+    font-size: 0.95rem;
+    width: 100%;
+  }
+  
+  .btn-block {
+    width: 100%;
+  }
+  
+  .step-top-bar {
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: stretch;
+  }
+  
+  .btn-back {
+    align-self: flex-start;
+  }
+  
+  .selected-amount-tag {
+    align-self: flex-start;
+    width: 100%;
+  }
+  
+  .section-title {
+    font-size: 1.1rem;
+  }
+  
+  .section-desc {
+    font-size: 0.85rem;
+  }
+  
+  .payment-tabs {
+    margin-bottom: 1rem;
+  }
+  
+  .tab-btn {
+    padding: 0.6rem 0.6rem;
+    font-size: 0.8rem;
+  }
+  
+  .amount-card {
+    padding: 1.25rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .amount-value {
+    font-size: 2rem;
+  }
+  
+  .qr-frame {
+    width: 160px;
+    height: 160px;
+  }
+  
+  .detail-box {
+    padding: 0.85rem 1rem;
+    margin-bottom: 0.75rem;
+  }
+  
+  .detail-label {
+    font-size: 0.75rem;
+  }
+  
+  .detail-val {
+    font-size: 0.9rem;
+  }
+  
+  .copy-field {
+    flex-wrap: wrap;
+    gap: 0.5rem;
+  }
+  
+  .btn-copy {
+    padding: 0.35rem 0.6rem;
+    font-size: 0.8rem;
+    flex-shrink: 0;
+  }
+  
+  .curriculum-box {
+    padding: 1rem;
+    margin-top: 1.25rem;
+  }
+  
+  .curriculum-title {
+    font-size: 0.82rem;
+  }
+  
+  .curriculum-list li {
+    font-size: 0.82rem;
+  }
+  
+  .toast-container {
+    bottom: 1rem;
+    right: 1rem;
+    left: 1rem;
+  }
+  
+  .toast {
+    padding: 0.75rem 1rem;
+    font-size: 0.85rem;
+  }
+}
+
+/* Mobile (600px and below) */
+@media (max-width: 600px) {
+  .app-container {
+    padding: 0.75rem;
+  }
+  
+  .card-banner {
+    margin-bottom: 1.25rem;
+  }
+  
+  .banner-content {
+    padding: 1.5rem 1rem;
+    max-width: 100%;
+  }
+  
+  .hero-title { 
+    font-size: 1.5rem;
+    line-height: 1.1;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+    line-height: 1.4;
+  }
+  
+  .software-pills {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .software-pill {
+    font-size: 0.75rem;
+    padding: 0.4rem 0.75rem;
+  }
+  
+  .event-badge {
+    font-size: 0.75rem;
+    padding: 0.35rem 0.8rem;
+    margin-bottom: 1rem;
+  }
+  
+  .user-chip {
+    font-size: 0.8rem;
+    padding: 0.25rem 0.7rem;
+  }
+  
+  .notice-text {
+    font-size: 0.78rem;
+    line-height: 1.4;
+  }
+  
+  .glass-card {
+    padding: 1rem;
+    border-radius: var(--radius-md);
+  }
+  
+  .stepper-header {
+    margin-bottom: 1.25rem;
+    padding-bottom: 0.8rem;
+  }
+  
+  .step-num {
+    width: 36px;
+    height: 36px;
+    font-size: 0.85rem;
+  }
+  
+  .step-title {
+    font-size: 0.9rem;
+  }
+  
+  .step-sub {
+    font-size: 0.7rem;
+  }
+  
+  label {
+    font-size: 0.82rem;
+  }
+  
+  .req {
+    color: #dc2626;
+  }
+  
+  input[type="text"],
+  input[type="tel"] {
+    padding: 0.7rem 0.9rem 0.7rem 2.5rem;
+    font-size: 16px;
+    border-radius: var(--radius-sm);
+  }
+  
+  .input-icon {
+    left: 0.7rem;
+    font-size: 0.95rem;
+  }
+  
+  .input-group {
+    margin-bottom: 0.9rem;
+  }
+  
+  .error-msg {
+    font-size: 0.75rem;
+    margin-top: 0.3rem;
+  }
+  
+  .payment-method-options {
+    gap: 0.6rem;
+  }
+  
+  .radio-card {
+    padding: 0.85rem 0.9rem;
+  }
+  
+  .radio-content {
+    gap: 0.6rem;
+  }
+  
+  .radio-icon {
+    width: 32px;
+    height: 32px;
+    font-size: 0.95rem;
+  }
+  
+  .radio-text strong {
+    font-size: 0.88rem;
+  }
+  
+  .radio-text span {
+    font-size: 0.75rem;
+  }
+  
+  .file-dropzone {
+    padding: 1.25rem 0.75rem;
+    border-radius: var(--radius-sm);
+  }
+  
+  .dropzone-icon {
+    font-size: 1.6rem;
+    margin-bottom: 0.3rem;
+  }
+  
+  .dropzone-title {
+    font-size: 0.85rem;
+    font-weight: 700;
+  }
+  
+  .dropzone-hint {
+    font-size: 0.8rem;
+  }
+  
+  .dropzone-preview {
+    gap: 0.75rem;
+  }
+  
+  .dropzone-preview img {
+    width: 50px;
+    height: 50px;
+  }
+  
+  .btn {
+    padding: 0.8rem 1.2rem;
+    font-size: 0.92rem;
+    border-radius: var(--radius-md);
+    width: 100%;
+  }
+  
+  .btn-back {
+    font-size: 0.8rem;
+    padding: 0.2rem;
+  }
+  
+  .selected-amount-tag {
+    font-size: 0.78rem;
+    padding: 0.3rem 0.7rem;
+  }
+  
+  .step-top-bar {
+    flex-direction: column;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .section-title {
+    font-size: 1rem;
+    gap: 0.4rem;
+  }
+  
+  .section-title i {
+    font-size: 1.1rem;
+  }
+  
+  .section-desc {
+    font-size: 0.82rem;
+    margin-bottom: 1.25rem;
+  }
+  
+  .payment-tabs {
+    gap: 0.15rem;
+    margin-bottom: 1rem;
+  }
+  
+  .tab-btn {
+    padding: 0.55rem 0.5rem;
+    font-size: 0.75rem;
+  }
+  
+  .amount-card {
+    padding: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .amount-label {
+    font-size: 0.75rem;
+  }
+  
+  .amount-value {
+    font-size: 1.8rem;
+    margin: 0.1rem 0;
+  }
+  
+  .amount-sub {
+    font-size: 0.8rem;
+  }
+  
+  .qr-container {
+    margin-bottom: 1rem;
+  }
+  
+  .qr-frame {
+    width: 140px;
+    height: 140px;
+    margin-bottom: 0.5rem;
+  }
+  
+  .qr-instruction {
+    font-size: 0.8rem;
+  }
+  
+  .detail-box {
+    padding: 0.75rem 0.9rem;
+    margin-bottom: 0.6rem;
+  }
+  
+  .detail-label {
+    font-size: 0.7rem;
+    margin-bottom: 0.2rem;
+  }
+  
+  .detail-val {
+    font-size: 0.85rem;
+  }
+  
+  .copy-field {
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .copy-field code {
+    font-size: 0.9rem;
+    word-break: break-all;
+  }
+  
+  .btn-copy {
+    width: 100%;
+    padding: 0.4rem 0.6rem;
+    font-size: 0.75rem;
+  }
+  
+  .info-alert {
+    padding: 0.85rem 1rem;
+    font-size: 0.82rem;
+    gap: 0.5rem;
+    margin-top: 1rem;
+  }
+  
+  .curriculum-box {
+    padding: 0.9rem;
+    margin-top: 1rem;
+  }
+  
+  .curriculum-title {
+    font-size: 0.8rem;
+    margin-bottom: 0.5rem;
+  }
+  
+  .curriculum-list {
+    gap: 0.3rem;
+  }
+  
+  .curriculum-list li {
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+  
+  .curriculum-list li i {
+    font-size: 0.7rem;
+  }
+  
+  .support-footer {
+    margin-top: 1rem;
+    padding-top: 0.8rem;
+    font-size: 0.8rem;
+    gap: 0.4rem;
+  }
+  
+  .app-footer {
+    margin-top: 2rem;
+    font-size: 0.8rem;
+    padding: 0 0.5rem;
+  }
+  
+  .toast-container {
+    bottom: 0.75rem;
+    right: 0.75rem;
+    left: 0.75rem;
+  }
+  
+  .toast {
+    padding: 0.65rem 0.9rem;
+    font-size: 0.8rem;
+    gap: 0.5rem;
+  }
+}
+
+/* Extra Small Devices (360px and below) */
+@media (max-width: 400px) {
+  .app-container {
+    padding: 0.5rem;
+  }
+  
+  .hero-title {
+    font-size: 1.25rem;
+  }
+  
+  .banner-content {
+    padding: 1.25rem 0.75rem;
+  }
+  
+  .glass-card {
+    padding: 0.85rem;
+  }
+  
+  .section-title {
+    font-size: 0.95rem;
+  }
+  
+  .btn {
+    padding: 0.75rem 1rem;
+    font-size: 0.9rem;
+  }
+  
+  input[type="text"],
+  input[type="tel"] {
+    padding: 0.65rem 0.8rem 0.65rem 2.4rem;
+  }
+}
+
