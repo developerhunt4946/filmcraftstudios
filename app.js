@@ -286,9 +286,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return fetch(CONFIG.googleSheetWebhookUrl, {
       method: "POST",
-      mode: "no-cors", // Google Apps Script Web App standard mode
+      mode: "no-cors",
       headers: {
-        "Content-Type": "application/json"
+        "Content-Type": "text/plain" // "text/plain" avoids CORS preflight — works from GitHub Pages & any domain
       },
       body: JSON.stringify(payload)
     }).then(() => {
