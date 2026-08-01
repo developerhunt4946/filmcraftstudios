@@ -1,11 +1,18 @@
 /**
- * CONFIGURATION - Filmcraft Institute Course & Bank Account Details
+ * CONFIGURATION - Filmcraft Institute Course & Google Sheet Integration
+ * 
+ * To connect your Google Sheet:
+ * 1. Open your Google Sheet -> Extensions -> Apps Script
+ * 2. Paste the Google Apps Script code provided in the instructions below
+ * 3. Click "Deploy" -> "New deployment" -> Select "Web app" -> Set "Who has access" to "Anyone"
+ * 4. Copy the Web App URL and paste it into `googleSheetWebhookUrl` below.
  */
 const CONFIG = {
   instituteName: "Filmcraft Institute",
   courseName: "Cinematography & Video Editing Course",
   userEmail: "aagm0404@gmail.com",
   whatsappNumber: "+919876543210", // Target WhatsApp number (Include country code)
+  googleSheetWebhookUrl: "https://script.google.com/macros/s/AKfycbwQf82Fl5XEn8T31Zf8rIfSl_5L2Ouzw33_NuhurwYUl8hQjKaWFv4dXGnp7Q621ES9jA/exec",
   upiId: "filmcraftinstitute@upi",
   bankDetails: {
     accountHolder: "Harsh Kumar",
@@ -269,7 +276,30 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 
   /* ==========================================
-     6. Form Submission & WhatsApp Link Format
+     6. Send Data to Google Sheet (Background Webhook)
+     ========================================== */
+  function sendToGoogleSheet(payload) {
+    if (!CONFIG.googleSheetWebhookUrl || CONFIG.googleSheetWebhookUrl.trim() === "") {
+      console.log("Google Sheet URL not configured yet. Skipping Sheet logging.");
+      return Promise.resolve();
+    }
+
+    return fetch(CONFIG.googleSheetWebhookUrl, {
+      method: "POST",
+      mode: "no-cors", // Google Apps Script Web App standard mode
+      headers: {
+        "Content-Type": "application/json"
+      },
+      body: JSON.stringify(payload)
+    }).then(() => {
+      console.log("Data successfully posted to Google Sheet webhook.");
+    }).catch(err => {
+      console.error("Error submitting to Google Sheet:", err);
+    });
+  }
+
+  /* ==========================================
+     7. Form Submission & WhatsApp Link Format
      ========================================== */
   form.addEventListener("submit", (e) => {
     e.preventDefault();
@@ -289,6 +319,25 @@ document.addEventListener("DOMContentLoaded", () => {
     const address = document.getElementById("address").value.trim();
     const paymentMethod = getSelectedPaymentMethod();
     const txnId = document.getElementById("txn-id").value.trim();
+    const screenshotFile = screenshotInput.files[0];
+
+    const submissionPayload = {
+      timestamp: new Date().toLocaleString("en-IN", { timeZone: "Asia/Kolkata" }),
+      institute: CONFIG.instituteName,
+      course: CONFIG.courseName,
+      userEmail: CONFIG.userEmail,
+      name: name,
+      mobile: mobile,
+      address: address,
+      paymentMethod: paymentMethod,
+      txnId: txnId,
+      fileName: screenshotFile ? screenshotFile.name : "Attached via WhatsApp"
+    };
+
+    showToast("Saving to Google Sheet & launching WhatsApp...");
+
+    // Send to Google Sheet in background
+    sendToGoogleSheet(submissionPayload);
 
     // Format Structured WhatsApp Message
     const message = 
@@ -316,8 +365,6 @@ _Note: I am attaching my payment screenshot herewith for course registration ver
     const encodedMessage = encodeURIComponent(message);
     const cleanPhone = CONFIG.whatsappNumber.replace(/\D/g, "");
     const waUrl = `https://wa.me/${cleanPhone}?text=${encodedMessage}`;
-
-    showToast("Launching WhatsApp... Send message & attach screenshot!");
 
     setTimeout(() => {
       window.open(waUrl, "_blank");
