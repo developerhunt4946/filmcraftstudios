@@ -317,6 +317,8 @@ document.addEventListener("DOMContentLoaded", () => {
     const name = document.getElementById("full-name").value.trim();
     const mobile = document.getElementById("mobile").value.trim();
     const address = document.getElementById("address").value.trim();
+    const isExperienced = document.getElementById("student-experience").checked;
+    const studentStatus = isExperienced ? "Experienced" : "Fresher";
     const paymentMethod = getSelectedPaymentMethod();
     const txnId = document.getElementById("txn-id").value.trim();
     const screenshotFile = screenshotInput.files[0];
@@ -329,6 +331,7 @@ document.addEventListener("DOMContentLoaded", () => {
       name: name,
       mobile: mobile,
       address: address,
+      studentStatus: studentStatus,
       paymentMethod: paymentMethod,
       txnId: txnId,
       fileName: screenshotFile ? screenshotFile.name : "Attached via WhatsApp"
@@ -352,6 +355,7 @@ document.addEventListener("DOMContentLoaded", () => {
 📌 *Your Name:* ${name}
 📱 *Mobile No:* ${mobile}
 🏠 *Address:* ${address}
+🎓 *Student Status:* ${studentStatus}
 
 💳 *PAYMENT INFORMATION*
 ----------------------------------------
