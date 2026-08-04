@@ -858,8 +858,8 @@ input:focus + .input-icon,
   width: 190px;
   height: 190px;
   margin: 0 auto 0.75rem auto;
-  padding: 0.6rem;
-  background: #ffffff;
+  /* padding: 0.6rem; */
+  /* background: #ffffff; */
   border-radius: var(--radius-md);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.5);
   display: flex;
