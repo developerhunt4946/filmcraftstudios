@@ -10,7 +10,7 @@
 const CONFIG = {
   instituteName: "Filmcraft Institute",
   courseName: "Cinematography & Video Editing Course",
-  userEmail: "hk3g123@gmail.com",
+  userEmail: "filmcraftinstitute@gmail.com",
   whatsappNumber: "+919336414677", // Target WhatsApp number (Include country code)
   googleSheetWebhookUrl: "https://script.google.com/macros/s/AKfycbwQf82Fl5XEn8T31Zf8rIfSl_5L2Ouzw33_NuhurwYUl8hQjKaWFv4dXGnp7Q621ES9jA/exec",
   upiId: "filmcraftinstitute@upi",
